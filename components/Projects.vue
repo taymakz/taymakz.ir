@@ -1,0 +1,59 @@
+<script lang="ts" setup>
+
+</script>
+
+<template>
+  <div class="container">
+    <h2 class="text-2xl bg-clip-text bg-gradient-to-b text-transparent from-text/80 to-text/100 font-bold mb-10">
+      پروژه ها
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-6">
+      <!-- Tipoosh -->
+      <Demo  link="https://shop.taymakz.ir/" media="/demos/tipoosh.mp4" title="وبسایت فروشگاهی تیپوش Vue/Nuxt 3 - Django" date="1402 اسفند">
+        <ul class=" px-2 space-y-2 mb-4  text-text/60 text-sm  ">
+          <li class="flex items-center gap-x-2">
+            <IconsNuxt class="w-6 h-6" />
+            فرانت Nuxt/Vue 3
+          </li>
+          <li class="flex items-center gap-x-2">
+            <IconsDjango class="w-6 h-6" />
+
+            بک اند Django
+          </li>
+        </ul>
+      </Demo>
+      <!-- Rotikala -->
+      <Demo link="https://rtlr.ir/266095" media="/demos/rotikala.mp4" title="قالب فروشگاهی HTML" date="1402 شهریور">
+        <ul class=" px-2 space-y-2 mb-4  text-text/60 text-sm  ">
+          <li class="flex items-center gap-x-2">
+            <IconsTailwind class="w-6 h-6 text-primary" />
+            طراحی شده با Tailwind CSS
+          </li>
+          <li class="flex items-center gap-x-2">
+            <IconsDarkLight class="w-6 h-6 text-primary" />
+
+            حالت تیره و روشن
+          </li>
+        </ul>
+      </Demo>
+      <!-- Advie -->
+      <Demo github="https://github.com/taymakz/advie-frontend" github-text="ادویه" link="https://www.taymaz-project.ir/" media="/demos/advie.mp4" title="وبسایت فروشگاهی Vue/Nuxt 3 - Django" date="1402 فروردین">
+        <ul class=" px-2 space-y-2 mb-4  text-text/60 text-sm  ">
+          <li class="flex items-center gap-x-2">
+            <IconsNuxt class="w-6 h-6" />
+            فرانت Nuxt/Vue 3
+          </li>
+          <li class="flex items-center gap-x-2">
+            <IconsDjango class="w-6 h-6" />
+
+            بک اند Django
+          </li>
+        </ul>
+      </Demo>
+    </div>
+  </div>
+</template>
+
+<style>
+
+</style>
