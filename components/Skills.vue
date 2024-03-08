@@ -22,8 +22,8 @@
       </Skill>
 
       <Skill>
-        <IconsDjangoDRF class="w-8 h-8 text-success" />
-        Django DRF
+        <IconsDjangoRest class="w-8 h-8 text-success" />
+        Django Rest
       </Skill>
       <Skill>
         <IconsTailwind class="w-8 h-8" />
