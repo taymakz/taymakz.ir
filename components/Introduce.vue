@@ -10,7 +10,7 @@
 
     <div class="space-y-6 leading-loose text-text/60 mb-8">
       <p>
-          توسعه‌دهنده وب Front-End با تجربه بیش از 2 سال و مهارت در فریم‌ورک‌های معروف مانند Tailwind، Vue، و Nuxt .
+        توسعه‌دهنده وب Front-End با تجربه بیش از 2 سال و مهارت در فریم‌ورک‌های معروف مانند Tailwind، Vue، و Nuxt .
         از آغاز تاکنون، عشق و علاقه اصلی من به کدنویسی و توسعه وب، مرا به یک فرد پیگیر و خلاق تبدیل کرده است.
       </p>
       <p>
@@ -27,6 +27,7 @@
       </h2>
       <div class="flex flex-wrap gap-x-4">
         <NuxtLink
+          aria-label="Taymakz Github"
           external target="_blank" to="https://github.com/Taymakz"
           class="flex items-center gap-x-2 pb-2 text-text/60 hover:text-text/80 border-b border-border/50 hover:border-border/100 duration-200"
         >
@@ -35,6 +36,7 @@
           گیت هاب
         </NuxtLink>
         <NuxtLink
+          aria-label="Taymakz X"
           external target="_blank" to="https://x.com/Taymakz"
           class="flex items-center gap-x-2 pb-2 text-text/60 hover:text-text/80 border-b border-border/50 hover:border-border/100 duration-200"
         >
@@ -43,6 +45,7 @@
           تویتر
         </NuxtLink>
         <NuxtLink
+          aria-label="Taymakz Instagram"
           external target="_blank" to="https://instagram.com/Taymakz"
           class="flex items-center gap-x-2 pb-2 text-text/60 hover:text-text/80 border-b border-border/50 hover:border-border/100 duration-200"
         >
