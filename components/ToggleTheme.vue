@@ -56,7 +56,7 @@ function toggle(event?: MouseEvent) {
 </script>
 
 <template>
-  <button class="text-text/60 hover:text-text/80" @click="toggle">
+  <button class="text-text/60 hover:text-text/80" @click="toggle" title="Toggle Theme">
     <IconMoon class="dark:hidden" />
     <IconSun class="hidden dark:block " />
   </button>

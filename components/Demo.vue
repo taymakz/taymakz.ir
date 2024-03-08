@@ -30,6 +30,7 @@ defineProps({
 <template>
   <NuxtLink
     :to="link" external
+    :aria-label="title"
     class="border overflow-hidden pb-4 border-border/50 hover:border-border/100 rounded-xl shadow duration-300  "
   >
     <!-- media -->

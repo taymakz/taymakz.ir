@@ -4,6 +4,7 @@
       <ToggleTheme />
       <div class="hidden xs:block">
         <NuxtLink
+          aria-label="Taymakz Github"
           external target="_blank" to="https://github.com/Taymakz"
           class="text-text/60 hover:text-text/80  duration-200 "
         >
@@ -12,6 +13,7 @@
       </div>
       <div class="hidden xs:block">
         <NuxtLink
+          aria-label="Taymakz X"
           external target="_blank" to="https://x.com/Taymakz"
           class=" text-text/60 hover:text-text/80  duration-200 "
         >
@@ -20,6 +22,7 @@
       </div>
       <div class="hidden xs:block">
         <NuxtLink
+          aria-label="Taymakz Instagram"
           external target="_blank" to="https://instagram.com/Taymakz"
           class=" text-text/60 hover:text-text/80  duration-200 "
         >
@@ -30,7 +33,7 @@
     <div />
 
     <NuxtLink to="/">
-      <NuxtImg src="/logo.png" alt="Taymaz Akbari" class="w-10 xs:w-12" />
+      <NuxtImg src="/logo.png" alt="Taymaz Akbari" class="w-10 xs:w-12 aspect-[1/1]" placeholder loading="lazy" />
     </NuxtLink>
   </header>
 </template>
