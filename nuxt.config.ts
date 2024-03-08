@@ -17,13 +17,17 @@ export default defineNuxtConfig({
   app: {
     head: {
       viewport: 'width=device-width,initial-scale=1',
-      titleTemplate: '%s | Nuxt',
       htmlAttrs: {
         dir: 'rtl',
         lang: 'fa-IR',
       },
       link: [
         { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          href: '/favicon.ico',
+        },
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.ico' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
       ],
@@ -38,7 +42,7 @@ export default defineNuxtConfig({
 
   },
   site: {
-    url: 'https://example.com',
+    url: 'https://taymakz.ir',
     name: appName,
     description: appDescription,
     defaultLocale: 'fa', // not needed if you have @nuxtjs/i18n installed

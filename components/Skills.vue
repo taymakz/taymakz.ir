@@ -22,7 +22,7 @@
       </Skill>
 
       <Skill>
-        <IconsDjangoRest class="w-8 h-8 text-success" />
+        <IconsDjango class="w-8 h-8 " />
         Django Rest
       </Skill>
       <Skill>
@@ -42,8 +42,8 @@
         Graphql
       </Skill>
       <Skill>
-        <IconsAPI class="w-8 h-8" />
-        API
+        <IconsRestApi class="w-8 h-8" />
+        Rest Api
       </Skill>
     </div>
   </div>
