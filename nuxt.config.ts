@@ -14,6 +14,10 @@ export default defineNuxtConfig({
     'nuxt-lucide-icons',
     'nuxt-marquee',
   ],
+  routeRules: {
+    // Homepage pre-rendered at build time
+    '/': { prerender: true },
+  },
   app: {
     head: {
       viewport: 'width=device-width,initial-scale=1',
