@@ -5,15 +5,14 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
+    '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
-    'shadcn-nuxt',
     '@nuxt/image',
     '@vite-pwa/nuxt',
-    '@vueuse/nuxt',
-    '@pinia/nuxt',
     '@nuxtjs/seo',
     'nuxt-lucide-icons',
+    'nuxt-marquee',
   ],
   app: {
     head: {
@@ -62,11 +61,6 @@ export default defineNuxtConfig({
   lucide: {
     namePrefix: 'Icon',
   },
-  shadcn: {
-    prefix: '',
-    componentDir: './components/ui',
-  },
-
   runtimeConfig: {
     public: {
       baseApi: '', // Base Api environment variable

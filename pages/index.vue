@@ -9,6 +9,9 @@ defineOgImageComponent('NuxtSeo', {
 <template>
   <div class="pb-10">
     <Introduce />
-    <Projects/>
+    <ClientOnly>
+      <Skills />
+      <Projects />
+    </ClientOnly>
   </div>
 </template>
