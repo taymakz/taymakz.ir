@@ -1,19 +1,55 @@
-import { pwa } from './config/pwa'
 import { appDescription, appName } from './constants/index'
+
+const sw = import.meta.env.SW === 'true'
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
     '@vueuse/nuxt',
+    '@vite-pwa/nuxt',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     '@nuxt/image',
-    '@vite-pwa/nuxt',
     '@nuxtjs/seo',
     'nuxt-lucide-icons',
     'nuxt-marquee',
   ],
+  pwa: {
+    strategies: sw ? 'injectManifest' : 'generateSW',
+    srcDir: sw ? 'service-worker' : undefined,
+    filename: sw ? 'sw.ts' : undefined,
+    registerType: 'autoUpdate',
+    manifest: {
+      name: 'Taymaz Akbari',
+      short_name: 'Taymaz',
+      theme_color: '#F4F4F5',
+      icons: [
+        {
+          src: 'pwa-192x192.png',
+          sizes: '192x192',
+          type: 'image/png',
+        },
+        {
+          src: 'pwa-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+        },
+        {
+          src: 'maskable-icon.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any maskable',
+        },
+      ],
+    },
+    // workbox: {
+    //   globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+    // },
+    // injectManifest: {
+    //   globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+    // },
+  },
   routeRules: {
     // Homepage pre-rendered at build time
     '/': { prerender: true },
@@ -65,7 +101,6 @@ export default defineNuxtConfig({
     },
 
   },
-  pwa,
   lucide: {
     namePrefix: 'Icon',
   },

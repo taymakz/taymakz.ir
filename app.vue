@@ -24,7 +24,7 @@ useHead({
 </script>
 
 <template>
-  <VitePwaManifest />
+  <NuxtPwaAssets />
   <NuxtLayout>
     <NuxtLoadingIndicator :size="3" />
     <NuxtPage />
