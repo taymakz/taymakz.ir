@@ -6,8 +6,14 @@ import { NavigationRoute, registerRoute } from 'workbox-routing'
 
 declare let self: ServiceWorkerGlobalScope
 
-// self.__WB_MANIFEST is default injection point
-precacheAndRoute(self.__WB_MANIFEST)
+// Define your precache entries including the root URL
+const precacheManifest = [
+  { url: '/', revision: null }, // Add the root URL here
+  ...self.__WB_MANIFEST,
+]
+
+// precacheAndRoute with updated precacheManifest
+precacheAndRoute(precacheManifest)
 
 // clean old assets
 cleanupOutdatedCaches()
