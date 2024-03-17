@@ -6,6 +6,9 @@
   <div class="container">
     <h1 class="text-3xl bg-clip-text bg-gradient-to-b text-transparent from-text/80 to-text/100 font-bold mb-8">
       تایماز اکبری
+      <p class="sr-only">
+        Taymaz akbari
+      </p>
     </h1>
 
     <div class="space-y-6 leading-loose text-text/60 mb-8">
