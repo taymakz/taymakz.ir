@@ -1,7 +1,3 @@
-<script lang="ts" setup>
-
-</script>
-
 <template>
   <div class="container">
     <h1 class="text-3xl bg-clip-text bg-gradient-to-b text-transparent from-text/80 to-text/100 font-bold mb-8">
@@ -60,7 +56,3 @@
     </div>
   </div>
 </template>
-
-<style>
-
-</style>
