@@ -35,7 +35,7 @@ defineProps({
   >
     <!-- media -->
     <div class="mb-6 border-b ">
-      <video autoplay loop muted inline>
+      <video autoplay loop muted inline class="w-full aspect-[1.75/1] object-cover ">
         <source :src="media" type="video/mp4">
       </video>
     </div>
