@@ -12,10 +12,10 @@
       <Demo link="https://fc.taymakz.ir/" media="/demos/font-changer.mp4" title="اپلیکیشن تغییر فونت" date="1403 فروردین" github="https://github.com/taymakz/font-changer" github-text="Font Changer">
         <ul class=" px-2 space-y-2 mb-4  text-text/60 text-sm  ">
           <li class="flex items-center gap-x-2">
-            z
+            
             <IconsNuxt class="w-6 h-6" />
             Nuxt
-          </li>z
+          </li>
           <li class="flex items-center gap-x-2">
             <IconsTailwind class="w-6 h-6 text-primary" />
             Tailwind
