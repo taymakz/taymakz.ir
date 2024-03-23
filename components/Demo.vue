@@ -39,7 +39,7 @@ defineProps({
         <source :src="media" type="video/mp4">
       </video>
     </div>
-    <div class="text-text/80 px-4 line-clamp-2 mb-4">
+    <div class="text-text/80 px-4 line-clamp-2 mb-4 h-12">
       {{ title }}
     </div>
     <slot />
