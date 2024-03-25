@@ -16,8 +16,23 @@ export default defineNuxtConfig({
     'nuxt-marquee',
   ],
   pwa,
-  routeRules: {
-    '/': { prerender: true },
+  experimental: {
+    watcher: 'parcel', // 'chokidar' or 'parcel' are also options
+    payloadExtraction: false,
+    renderJsonPayloads: true,
+    typedPages: true,
+  },
+  nitro: {
+    esbuild: {
+      options: {
+        target: 'esnext',
+      },
+    },
+    prerender: {
+      routes: [
+        '/'
+      ],
+    },
   },
   app: {
     head: {
