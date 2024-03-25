@@ -14,6 +14,8 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     'nuxt-lucide-icons',
     'nuxt-marquee',
+    "@nuxt/eslint",
+    "nuxt-build-cache"
   ],
   pwa,
   experimental: {
@@ -96,5 +98,10 @@ export default defineNuxtConfig({
   },
   tailwindcss: {
     viewer: false,
+  },
+  eslint: {
+    config: {
+      standalone: false,
+    },
   },
 })
