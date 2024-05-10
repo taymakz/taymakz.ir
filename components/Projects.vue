@@ -37,7 +37,7 @@
         </ul>
       </Demo>
       <!-- Rotikala -->
-      <Demo link="https://rtlr.ir/266095" media="/demos/rotikala.mp4" title="قالب فروشگاهی HTML" date="1402 شهریور">
+      <Demo link="https://rtlr.ir/266095" media="/demos/rotikala.mp4" title="قالب فروشگاهی HTML روتی کالا" date="1402 شهریور">
         <ul class=" px-2 space-y-2 mb-4  text-text/60 text-sm  ">
           <li class="flex items-center gap-x-2">
             <IconsTailwind class="w-6 h-6 text-primary" />
