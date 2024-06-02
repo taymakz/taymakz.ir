@@ -28,7 +28,7 @@
     "eslint": "latest",
     "lucide-vue-next": "^0.358.0",
     "mini-svg-data-uri": "^1.4.4",
-    "nuxt": "^3.11.1",
+    "nuxt": "^3.11.2",
     "nuxt-build-cache": "^0.1.1",
     "nuxt-lucide-icons": "^1.0.4",
     "nuxt-marquee": "^1.0.3",

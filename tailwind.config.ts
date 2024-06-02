@@ -2,7 +2,6 @@ import svgToDataUri from 'mini-svg-data-uri'
 import animate from 'tailwindcss-animate'
 
 // eslint-disable-next-line ts/ban-ts-comment
-// @ts-expect-error
 import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette'
 
 /** @type {import('tailwindcss').Config} */
@@ -15,6 +14,11 @@ export default {
       sm: '640px',
       md: '768px',
     },
+
+
+
+
+    
     container: {
       center: true,
       padding: {

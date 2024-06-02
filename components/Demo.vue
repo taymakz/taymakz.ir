@@ -1,43 +1,30 @@
 <script lang="ts" setup>
-defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
-  link: {
-    type: String,
-    required: true,
-  },
-  media: {
-    type: String,
-    required: true,
-  },
-  date: {
-    type: String,
-    required: true,
-  },
-  github: {
-    type: String,
-    required: false,
-  },
-  githubText: {
-    type: String,
-    required: false,
-  },
-})
+defineProps<{
+  title: string,
+  link: string,
+  media:string,
+  mediaType: 'video' | 'image',
+  date: string,
+  github?:string,
+  githubText?:string,
+}>()
 </script>
 
 <template>
   <NuxtLink
-    :to="link" external
+    :to="link" 
+    external
+    target="_blank"
     :aria-label="title"
+
     class="border overflow-hidden pb-4 border-border/50 hover:border-border/100 rounded-xl shadow duration-300  "
   >
     <!-- media -->
     <div class="mb-6 border-b ">
-      <video autoplay loop muted inline class="w-full aspect-[1.75/1] object-cover ">
+      <video v-if="mediaType === 'video'" autoplay loop muted inline class="w-full aspect-[1.75/1] object-cover">
         <source :src="media" type="video/mp4">
       </video>
+      <NuxtImg v-else :src="media" class="w-full aspect-[1.75/1] "/>
     </div>
     <div class="text-text/80 px-4 line-clamp-2 mb-4 h-12">
       {{ title }}
