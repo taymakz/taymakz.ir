@@ -9,12 +9,20 @@
     </h2>
     <div class="flex flex-wrap gap-4">
       <Skill>
+        <IconsPython class="w-8 h-8" />
+        Python
+      </Skill>
+      <Skill>
+        <IconsJavascript class="w-8 h-8" />
+        Javascript
+      </Skill>
+      <Skill>
         <IconsVue class="w-8 h-8" />
-        Vue 3
+        Vue 
       </Skill>
       <Skill>
         <IconsNuxt class="w-8 h-8" />
-        Nuxt 3
+        Nuxt 
       </Skill>
       <Skill>
         <IconsDjango class="w-8 h-8" />
