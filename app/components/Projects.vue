@@ -6,7 +6,26 @@
 			پروژه ها
 		</h2>
 		<div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-6">
-			<!-- Rotikala -->
+				<!-- Unitter -->
+				<Demo
+				link="https://unitter.taymakz.ir"
+				media="/demos/unitter.jpg"
+				media-type="image"
+				title="وبسایت کمکی برای دانشجویان"
+				date="1403 آبان"
+			>
+			<ul class="px-2 space-y-2 mb-4 text-text/60 text-sm">
+					<li class="flex items-center gap-x-2">
+						<IconsNuxt class="w-6 h-6" />
+						Nuxt - Pinia
+					</li>
+					<li class="flex items-center gap-x-2">
+						<IconsTailwind class="w-6 h-6 text-primary" />
+						Tailwind
+					</li>
+				</ul>
+			</Demo>
+			<!-- Blesser -->
 			<Demo
 				link="https://blesser-intro.taymakz.ir"
 				media="/demos/blesser.png"
@@ -44,7 +63,7 @@
 				<ul class="px-2 space-y-2 mb-4 text-text/60 text-sm">
 					<li class="flex items-center gap-x-2">
 						<IconsNuxt class="w-6 h-6" />
-						Nuxt
+						Nuxt 
 					</li>
 					<li class="flex items-center gap-x-2">
 						<IconsTailwind class="w-6 h-6 text-primary" />
