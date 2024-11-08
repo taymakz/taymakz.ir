@@ -1,7 +1,8 @@
 import { appDescription, appName } from "./constants";
 import {pwa} from './config/pwa'
 export default defineNuxtConfig({
-	devtools: { enabled: true },
+	devtools: { enabled: false },
+
   future: {
     compatibilityVersion: 4,
   },
