@@ -26,11 +26,11 @@ defineProps<{
 				loop
 				muted
 				inline
-				class="w-full aspect-[1.75/1] object-cover"
+				class="w-full h-auto "
 			>
 				<source :src="media" type="video/mp4" />
 			</video>
-			<NuxtImg v-else :src="media" class="w-full aspect-[1.75/1] " :alt="title" />
+			<NuxtImg v-else :src="media" class="w-full h-auto  " :alt="title" />
 		</div>
 	
 			<div class="text-text/80 px-4 line-clamp-2 mb-4 h-12">
