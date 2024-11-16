@@ -1,9 +1,11 @@
 <script lang="ts" setup>
-import {  appName } from '~~/constants';
+import {  appDescriptionEN, appName, appNameEN } from '~~/constants';
 
-defineOgImageComponent('NuxtSeo', {
-	title: appName,
-});
+defineOgImageComponent('Main', {
+  title: appNameEN,
+  description: appDescriptionEN,
+  headline: 'Taymakz.ir',
+})
 </script>
 
 <template>
