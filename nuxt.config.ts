@@ -15,7 +15,6 @@ export default defineNuxtConfig({
 		'nuxt-lucide-icons',
 		'nuxt-marquee',
 		'@nuxt/eslint',
-		'nuxt-build-cache',
 	],
 	pwa ,
 	experimental: {
@@ -38,8 +37,7 @@ export default defineNuxtConfig({
 		head: {
 			viewport: 'width=device-width,initial-scale=1',
 			htmlAttrs: {
-				dir: 'rtl',
-				lang: 'fa-IR',
+				lang: 'en-US',
 			},
 			link: [
 				{ rel: 'icon', href: '/favicon.ico', sizes: 'any' },
@@ -95,13 +93,6 @@ export default defineNuxtConfig({
 	},
 	lucide: {
 		namePrefix: 'Icon',
-	},
-	runtimeConfig: {
-		public: {
-			baseApi: '', // Base Api environment variable
-			baseStorage: '', // Base Media environment variable
-			domain: '', // Domain environment variable
-		},
 	},
 	colorMode: {
 		classSuffix: '',

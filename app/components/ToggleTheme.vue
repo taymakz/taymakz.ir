@@ -5,7 +5,7 @@ const isDark = computed<boolean>({
 		return mode.value === 'dark';
 	},
 	set() {
-		mode.value = isDark.value ? 'light' : 'dark';
+		mode.preference = isDark.value ? 'light' : 'dark';
 	},
 });
 
@@ -27,7 +27,6 @@ function toggle(event?: MouseEvent) {
 		Math.max(x, innerWidth - x),
 		Math.max(y, innerHeight - y),
 	);
-	// @ts-expect-error: Transition API
 	const transition = document.startViewTransition(async () => {
 		isDark.value = !isDark.value;
 		await nextTick();

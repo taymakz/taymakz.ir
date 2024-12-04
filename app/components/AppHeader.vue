@@ -1,6 +1,14 @@
 <template>
 	<header class="p-5 flex items-center justify-between mb-16">
-		<div class="flex gap-x-4">
+		<NuxtLink to="/">
+			<NuxtImg
+				src="/logo.png"
+				alt="Taymaz Akbari"
+				class="w-10 xs:w-12 aspect-[1/1]"
+				loading="lazy"
+			/>
+		</NuxtLink>
+		<div class="flex gap-4 flex-row-reverse">
 			<ToggleTheme />
 			<div class="hidden xs:block">
 				<NuxtLink
@@ -36,16 +44,7 @@
 				</NuxtLink>
 			</div>
 		</div>
-		<div />
-
-		<NuxtLink to="/">
-			<NuxtImg
-				src="/logo.png"
-				alt="Taymaz Akbari"
-				class="w-10 xs:w-12 aspect-[1/1]"
-				placeholder
-				loading="lazy"
-			/>
-		</NuxtLink>
+	
+	
 	</header>
 </template>

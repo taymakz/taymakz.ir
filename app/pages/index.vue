@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {  appDescriptionEN, appName, appNameEN } from '~~/constants';
+import {  appDescriptionEN, appNameEN } from '~~/constants';
 
 defineOgImageComponent('Main', {
   title: appNameEN,
@@ -11,9 +11,7 @@ defineOgImageComponent('Main', {
 <template>
 	<div class="pb-10">
 		<Introduce />
-		<ClientOnly>
-			<Skills />
 			<Projects />
-		</ClientOnly>
+
 	</div>
 </template>

@@ -11,9 +11,6 @@ useSeoMeta({
 });
 
 useHead({
-	htmlAttrs: {
-		lang: 'fa',
-	},
 	link: [
 		{
 			rel: 'icon',
