@@ -3,7 +3,6 @@ import { appDescription, appName } from '~~/constants';
 
 
 useSeoMeta({
-	ogImage: '/logo.png',
 	twitterTitle: appName,
 	twitterDescription: appDescription,
 	twitterImage: '/logo.png',
