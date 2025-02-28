@@ -15,6 +15,13 @@ export interface ProjectType {
 }
 
 const projects: ProjectType[] = [
+{
+        media: { url: "/demos/mini-all-student-hub.png", type: "image" },
+        link: "https://t.me/student_hub_bot",
+        title: "Telegram MiniApp Student Hub",
+        date: "March 2025",
+        stacks: ["Vue", "Nuxt","Tailwind","Django", "PostgreSQL"]
+    },
     {
         media: { url: "/demos/unitter.jpg", type: "image" },
         link: "https://unitter.taymakz.ir",
