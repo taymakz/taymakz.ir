@@ -6,6 +6,7 @@
     "build": "nuxi build",
     "pwa": "VITE_PLUGIN_PWA=true nuxi dev",
     "dev": "nuxi dev",
+    "update": "npx npm-check-updates -ui",
     "format": "eslint . --fix",
     "generate": "nuxi generate",
     "postinstall": "nuxi prepare",
@@ -14,28 +15,35 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.23.1",
-    "@nuxt/eslint": "0.6.1",
-    "@nuxt/image": "1.8.1",
+    "@antfu/eslint-config": "^4.13.2",
+    "@nuxt/eslint": "1.4.1",
+    "@nuxt/image": "1.10.0",
     "@nuxtjs/color-mode": "^3.5.2",
-    "@nuxtjs/seo": "2.0.0-rc.23",
-    "@nuxtjs/tailwindcss": "^6.12.2",
+    "@nuxtjs/seo": "3.0.3",
+    "@nuxtjs/tailwindcss": "^6.14.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@vite-pwa/nuxt": "^0.10.6",
-    "@vueuse/nuxt": "^11.2.0",
+    "@vite-pwa/nuxt": "^1.0.1",
+    "@vueuse/nuxt": "^13.3.0",
     "clsx": "^2.1.1",
-    "consola": "^3.2.3",
+    "consola": "^3.4.2",
     "eslint": "latest",
-    "lucide-vue-next": "^0.454.0",
+    "lucide-vue-next": "^0.511.0",
     "mini-svg-data-uri": "^1.4.4",
-    "nuxt": "^3.14.1592",
+    "nuxt": "^3.17.4",
     "nuxt-lucide-icons": "^1.0.5",
     "nuxt-marquee": "^1.0.4",
-    "tailwind-merge": "^2.5.4",
+    "tailwind-merge": "^3.3.0",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "latest",
-    "vue": "^3.5.12",
-    "vue-router": "^4.4.5",
-    "vue-tsc": "^2.1.10"
+    "vue": "^3.5.16",
+    "vue-router": "^4.5.1",
+    "vue-tsc": "^2.2.10"
+  },
+ "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp",
+      "@parcel/watcher",
+      "esbuild"
+    ]
   }
 }

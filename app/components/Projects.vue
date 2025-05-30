@@ -15,6 +15,20 @@ export interface ProjectType {
 }
 
 const projects: ProjectType[] = [
+    {
+        media: { url: "/demos/studenthub.webp", type: "image" },
+        link: "https://student-hub.ir",
+        title: "Student Hub | دانشجویار",
+        date: "March 2025",
+        stacks: [
+            "Vue",
+            "Nuxt",
+            "Tailwind",
+            "Django",
+            "Go",
+            "PostgreSQL"
+        ]
+    },
 {
         media: { url: "/demos/mini-all-student-hub.png", type: "image" },
         link: "https://t.me/student_hub_bot",
