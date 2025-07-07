@@ -15,6 +15,14 @@ export interface ProjectType {
 }
 
 const projects: ProjectType[] = [
+        {
+        media: { url: "/demos/dj-auth.avif", type: "image" },
+        github: { url: "https://github.com/taymakz/django-cookie-auth", text: "django cookie auth" },
+        link: "https://django-cookie-auth-docs.vercel.app/",
+        title: "Django Cookie Auth",
+		date: "July 2025",
+        stacks: ["Educational","Django", "Nextjs", "Fumadocs"]
+    },
     {
         media: { url: "/demos/studenthub.webp", type: "image" },
         link: "https://student-hub.ir",
