@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import AppHeader from './components/AppHeader.vue';
-
 const appDescription = 'Taymaz Akbari, a Frontend Engineer and creator of Studenthub & Menofy';
 
 useHead({
@@ -22,18 +20,10 @@ useHead({
     { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
   ]
 })
-
-defineOgImageComponent('Main', {
-  title: 'Taymaz Akbari',
-  description: 'Frontend Engineer and creator of Studenthub & Menofy',
-  headline: 'Taymakz.ir',
-})
 </script>
 
 <template>
   <div>
-    <AppHeader />
-    <Introduce />
-    <LazyProjects hydrate-on-visible />
+    <NuxtPage />
   </div>
 </template>

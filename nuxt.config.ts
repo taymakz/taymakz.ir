@@ -31,5 +31,26 @@ export default defineNuxtConfig({
     name: 'تایماز اکبری | Taymaz Akbari',
     description: 'Taymaz Akbari Portfolio | تایماز اکبری سایت شخصی ',
   },
-  pwa
+  pwa,
+  ogImage: {
+    defaults: {
+      component: 'NuxtSeo',
+      props: {
+        colorMode: 'dark',
+      },
+    },
+    fonts: [
+      // will load the Noto Sans font from Google fonts
+      'Comfortaa:400',
+      'Comfortaa:500',
+      'Comfortaa:600',
+    ],
+  },
+  nitro: {
+    prerender: {
+      routes: [
+        '/'
+      ]
+    }
+  }
 })
