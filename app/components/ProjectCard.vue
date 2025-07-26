@@ -13,7 +13,7 @@ defineProps<{
     <NuxtLink :to="item.link" external target="_blank" :aria-label="item.title" class="block ">
       <NuxtImg :src="item.media.url"
         class="sm:min-w-[350px] sm:w-[350px] md:min-w-[400px] md:w-[400px] w-full rounded-2xl border aspect-[16/8] object-cover"
-        :alt="item.media.alt || item.title" placeholder loading="lazy" :quality="85" />
+        :alt="item.media.alt || item.title" placeholder loading="lazy"  />
     </NuxtLink>
     <div>
       <div class="space-y-2">
