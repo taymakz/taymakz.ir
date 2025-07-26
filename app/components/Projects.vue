@@ -85,7 +85,7 @@ const projects: ProjectType[] = [
 </script>
 
 <template>
-    <div class="container max-w-screen-md pb-10 pt-20 space-y-10">
+    <div class="container max-w-screen-md pb-16 pt-30 space-y-10">
         <ProjectCard v-for="(item, index) in projects" :key="index" :item />
     </div>
 </template>
