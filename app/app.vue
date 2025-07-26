@@ -23,12 +23,6 @@ useHead({
   ]
 })
 
-useSeoMeta({
-  twitterTitle: 'Taymaz Akbari',
-  twitterDescription: appDescription,
-  twitterImage: '/logo.png',
-  twitterCard: 'summary',
-});
 defineOgImageComponent('Main', {
   title: 'Taymaz Akbari',
   description: 'Frontend Engineer and creator of Studenthub & Menofy',
