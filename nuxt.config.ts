@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/image',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    '@nuxtjs/seo'
   ],
   vite: {
     plugins: [
@@ -22,5 +23,11 @@ export default defineNuxtConfig({
     classSuffix: '',
     preference: 'dark',
     fallback: 'dark',
-  }
+  },
+  site: {
+    url: 'https://taymakz.ir',
+    name: 'تایماز اکبری | Taymaz Akbari',
+    description: 'Taymaz Akbari Portfolio | تایماز اکبری سایت شخصی ',
+  },
+
 })
