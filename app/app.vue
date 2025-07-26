@@ -6,5 +6,6 @@ import AppHeader from './components/AppHeader.vue';
 <template>
   <div>
     <AppHeader />
+    <Introduce/>
   </div>
 </template>
