@@ -10,8 +10,9 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/image',
     '@nuxtjs/color-mode',
-    '@nuxtjs/seo',
-    '@vite-pwa/nuxt'
+    '@vite-pwa/nuxt',
+    'nuxt-og-image',
+    '@nuxtjs/robots'
   ],
   vite: {
     plugins: [
@@ -32,14 +33,14 @@ export default defineNuxtConfig({
     description: 'Taymaz Akbari Portfolio | تایماز اکبری سایت شخصی ',
   },
   pwa,
-  // ogImage: {
-  //   fonts: [
-  //     // will load the Noto Sans font from Google fonts
-  //     'Comfortaa:400',
-  //     'Comfortaa:500',
-  //     'Comfortaa:600',
-  //   ],
-  // },
+  ogImage: {
+    fonts: [
+      // will load the Noto Sans font from Google fonts
+      'Comfortaa:400',
+      'Comfortaa:500',
+      'Comfortaa:600',
+    ],
+  },
   nitro: {
     prerender: {
       routes: ['/'],

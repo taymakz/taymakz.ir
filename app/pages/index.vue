@@ -2,11 +2,11 @@
 
 
 
-// defineOgImageComponent('Main', {
-//   title: 'Taymaz Akbari',
-//   description: 'Frontend Engineer',
-//   headline: 'Taymakz.ir',
-// })
+defineOgImageComponent('Main', {
+  title: 'Taymaz Akbari',
+  description: 'Frontend Engineer',
+  headline: 'Taymakz.ir',
+})
 </script>
 
 <template>
