@@ -1,4 +1,5 @@
 import tailwindcss from "@tailwindcss/vite";
+import { pwa } from './config/pwa'
 
 
 export default defineNuxtConfig({
@@ -9,7 +10,8 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/image',
     '@nuxtjs/color-mode',
-    '@nuxtjs/seo'
+    '@nuxtjs/seo',
+    '@vite-pwa/nuxt'
   ],
   vite: {
     plugins: [
@@ -29,5 +31,5 @@ export default defineNuxtConfig({
     name: 'تایماز اکبری | Taymaz Akbari',
     description: 'Taymaz Akbari Portfolio | تایماز اکبری سایت شخصی ',
   },
-
+  pwa
 })

@@ -18,6 +18,7 @@
     "@nuxtjs/color-mode": "3.5.2",
     "@nuxtjs/seo": "3.1.0",
     "@tailwindcss/vite": "^4.1.11",
+    "@vite-pwa/nuxt": "1.0.4",
     "eslint": "^9.32.0",
     "nuxt": "^4.0.1",
     "tailwindcss": "^4.1.11",
