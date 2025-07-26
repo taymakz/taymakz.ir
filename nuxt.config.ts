@@ -33,12 +33,6 @@ export default defineNuxtConfig({
   },
   pwa,
   ogImage: {
-    defaults: {
-      component: 'NuxtSeo',
-      props: {
-        colorMode: 'dark',
-      },
-    },
     fonts: [
       // will load the Noto Sans font from Google fonts
       'Comfortaa:400',
@@ -46,7 +40,7 @@ export default defineNuxtConfig({
       'Comfortaa:600',
     ],
   },
-  routeRules: {
-    '/': { prerender: true },
-  }
+  // routeRules: {
+  //   '/': { prerender: true },
+  // }
 })
