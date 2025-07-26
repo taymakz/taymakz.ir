@@ -32,18 +32,17 @@ export default defineNuxtConfig({
     description: 'Taymaz Akbari Portfolio | تایماز اکبری سایت شخصی ',
   },
   pwa,
-  ogImage: {
-    fonts: [
-      // will load the Noto Sans font from Google fonts
-      'Comfortaa:400',
-      'Comfortaa:500',
-      'Comfortaa:600',
-    ],
-  },
+  // ogImage: {
+  //   fonts: [
+  //     // will load the Noto Sans font from Google fonts
+  //     'Comfortaa:400',
+  //     'Comfortaa:500',
+  //     'Comfortaa:600',
+  //   ],
+  // },
   nitro: {
     prerender: {
       routes: ['/'],
-      ignore: ['/__og-image__/static/og.png']
     }
   }
 })
