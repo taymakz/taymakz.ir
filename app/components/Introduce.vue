@@ -19,7 +19,7 @@ const links = [
 </script>
 
 <template>
-  <main class="container max-w-screen-md pt-10 prose space-y-6 text-muted-foreground">
+  <main class="container max-w-screen-md pt-10 prose space-y-6 text-muted-foreground font-sans">
     <h1 class="font-semibold text-4xl text-foreground">
       Taymaz Akbari
     </h1>
@@ -33,13 +33,13 @@ const links = [
         <NuxtLink external to="//student-hub.ir" target="_blank" rel="noopener noreferrer"
           aria-label="Studenthub – Modern Student Community Web Application by Taymaz Akbari"
           title="Studenthub – Modern Student Community Web Application by Taymaz Akbari"
-          class="bg-card shadow border dark:border-transparent py-0.5 px-2 rounded-md text-primary hover:text-primary/80">
+          class="bg-card shadow-xs border dark:border-transparent py-0.5 px-2 rounded-md text-primary hover:text-primary/80">
           Studenthub
         </NuxtLink>
         <NuxtLink external to="//menofy.ir" target="_blank" rel="noopener noreferrer"
           aria-label="Menofy – Digital Menu Solution for Cafes and Restaurants by Taymaz Akbari"
           title="Menofy – Digital Menu Solution for Cafes and Restaurants by Taymaz Akbari"
-          class="bg-card shadow border dark:border-transparent py-0.5 px-2 rounded-md text-primary hover:text-primary/80">
+          class="bg-card shadow-xs border dark:border-transparent py-0.5 px-2 rounded-md text-primary hover:text-primary/80">
           Menofy
         </NuxtLink>
         <span class="sr-only">Menofy is a digital menu solution for cafes and restaurants.</span>
