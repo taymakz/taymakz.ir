@@ -46,11 +46,7 @@ export default defineNuxtConfig({
       'Comfortaa:600',
     ],
   },
-  nitro: {
-    prerender: {
-      routes: [
-        '/'
-      ]
-    }
+  routeRules: {
+    '/': { prerender: true },
   }
 })
