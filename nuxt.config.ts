@@ -10,8 +10,9 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/image',
     '@nuxtjs/color-mode',
-    '@nuxtjs/seo',
-    '@vite-pwa/nuxt'
+    '@vite-pwa/nuxt',
+    'nuxt-og-image',
+    '@nuxtjs/robots'
   ],
   vite: {
     plugins: [
@@ -43,7 +44,6 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: ['/'],
-      ignore: ['/__og-image__/static/og.png']
     }
   }
 })
