@@ -40,7 +40,10 @@ export default defineNuxtConfig({
       'Comfortaa:600',
     ],
   },
-  routeRules: {
-    '/': { prerender: true },
+  nitro: {
+    prerender: {
+      routes: ['/'],
+      ignore: ['/__og-image__/static/og.png']
+    }
   }
 })
