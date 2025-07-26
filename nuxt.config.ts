@@ -40,7 +40,7 @@ export default defineNuxtConfig({
       'Comfortaa:600',
     ],
   },
-  // routeRules: {
-  //   '/': { prerender: true },
-  // }
+  routeRules: {
+    '/': { prerender: true },
+  }
 })
