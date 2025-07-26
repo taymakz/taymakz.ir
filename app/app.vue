@@ -6,6 +6,7 @@ import AppHeader from './components/AppHeader.vue';
 <template>
   <div>
     <AppHeader />
-    <Introduce/>
+    <Introduce />
+    <LazyProjects hydrate-on-visible />
   </div>
 </template>
