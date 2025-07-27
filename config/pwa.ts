@@ -35,7 +35,7 @@ export const pwa: ModuleOptions = {
 	},
 	workbox: {
 		globPatterns: ['**/*.{js,css,html,txt,xml,png,ico,svg,woff2,mp4}'],
-		navigateFallbackDenylist: [/^\/.*/], // add pages regex or will redirect to root on Direct load
+		navigateFallbackDenylist: [/^\/.*/, /^\/robots\.txt$/], // prevent robots.txt from redirecting to root
 		navigateFallback: '/',
 		cleanupOutdatedCaches: true,
 	},
