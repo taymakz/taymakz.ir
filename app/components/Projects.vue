@@ -4,11 +4,11 @@ import type { ProjectType } from '~/types';
 const projects: ProjectType[] = [
     {
         media: {
-            url: "/projects/menofy.avif",
-            alt: "Menofy – Digital Menu Solution for Cafes and Restaurants by Taymaz Akbari"
+            url: "/projects/cafify.avif",
+            alt: "Cafify – Digital Menu Solution for Cafes and Restaurants by Taymaz Akbari"
         },
-        link: "https://menofy.ir",
-        title: "Menofy | منوفای",
+        link: "https://cafify.ir",
+        title: "Cafify | کافیفای",
         date: "July 2025",
         stacks: [
             "Vue",
@@ -18,8 +18,8 @@ const projects: ProjectType[] = [
             "PostgreSQL"
         ],
         seo: {
-            ariaLabel: "Menofy – Digital Menu Solution for Cafes and Restaurants by Taymaz Akbari",
-            title: "Menofy – Digital Menu Solution for Cafes and Restaurants by Taymaz Akbari"
+            ariaLabel: "Cafify – Digital Menu Solution for Cafes and Restaurants by Taymaz Akbari",
+            title: "Cafify – Digital Menu Solution for Cafes and Restaurants by Taymaz Akbari"
         }
     },
 

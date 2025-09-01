@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import CafifyLogo from "~/assets/images/cafify.png";
 const links = [
   {
     to: "https://github.com/taymakz",
@@ -30,19 +31,21 @@ const links = [
     <div class="flex items-center gap-2">
       <p class="text-muted-foreground"> Creator of</p>
       <div class="flex items-center gap-1.5 ">
+        <NuxtLink external to="//cafify.ir" target="_blank" rel="noopener noreferrer"
+          aria-label="Cafify – Digital Menu Solution for Cafes and Restaurants by Taymaz Akbari"
+          title="Cafify – Digital Menu Solution for Cafes and Restaurants by Taymaz Akbari"
+          class="bg-card shadow-xs border dark:border-transparent py-0.5 px-2 rounded-md text-primary hover:text-primary/80">
+          <img :src="CafifyLogo" alt="Cafify Logo" class="inline h-6.5 w-auto" />
+          Cafify
+        </NuxtLink>
         <NuxtLink external to="//student-hub.ir" target="_blank" rel="noopener noreferrer"
           aria-label="Studenthub – Modern Student Community Web Application by Taymaz Akbari"
           title="Studenthub – Modern Student Community Web Application by Taymaz Akbari"
           class="bg-card shadow-xs border dark:border-transparent py-0.5 px-2 rounded-md text-primary hover:text-primary/80">
           Studenthub
         </NuxtLink>
-        <NuxtLink external to="//menofy.ir" target="_blank" rel="noopener noreferrer"
-          aria-label="Menofy – Digital Menu Solution for Cafes and Restaurants by Taymaz Akbari"
-          title="Menofy – Digital Menu Solution for Cafes and Restaurants by Taymaz Akbari"
-          class="bg-card shadow-xs border dark:border-transparent py-0.5 px-2 rounded-md text-primary hover:text-primary/80">
-          Menofy
-        </NuxtLink>
-        <span class="sr-only">Menofy is a digital menu solution for cafes and restaurants.</span>
+
+        <span class="sr-only">Cafify is a digital menu solution for cafes and restaurants.</span>
       </div>
     </div>
     <p class="leading-7">
