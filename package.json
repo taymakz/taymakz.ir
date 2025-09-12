@@ -21,7 +21,7 @@
     "@unhead/vue": "^2.0.12",
     "@vite-pwa/nuxt": "1.0.4",
     "eslint": "^9.32.0",
-    "nuxt": "^4.0.1",
+    "nuxt": "^4.1.1",
     "nuxt-og-image": "5.1.9",
     "tailwindcss": "^4.1.11",
     "tailwindcss-background-patterns": "^0.1.2",
