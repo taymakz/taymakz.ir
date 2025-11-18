@@ -25,7 +25,7 @@ const links = [
       Taymaz Akbari
     </h1>
     <p>
-      Hi! I'm Taymaz Akbari, a Frontend Engineer, and I love it when people enjoy what i Build.
+      Hi! I'm Taymaz Akbari, a Software Engineer, and I love it when people enjoy what i Build.
     </p>
 
     <div class="flex items-center gap-2">
@@ -35,7 +35,7 @@ const links = [
           aria-label="Cafify – Digital Menu Solution for Cafes and Restaurants by Taymaz Akbari"
           title="Cafify – Digital Menu Solution for Cafes and Restaurants by Taymaz Akbari"
           class="bg-card shadow-xs border dark:border-transparent py-0.5 px-2 rounded-md text-primary hover:text-primary/80">
-          <img :src="CafifyLogo" alt="Cafify Logo" class="inline h-6.5 w-auto" />
+          <img :src="CafifyLogo" alt="Cafify Logo" class="inline h-6.5 w-auto">
           Cafify
         </NuxtLink>
         <NuxtLink external to="//student-hub.ir" target="_blank" rel="noopener noreferrer"
@@ -49,7 +49,8 @@ const links = [
       </div>
     </div>
     <p class="leading-7">
-      I've been working in web development for three years, mostly with Vue and modern tools. I love turning ideas into
+      I've been working in web development for four years, mostly with Vue and modern tools. Recently, I switched from
+      Vue.js/Nuxt to React/Next.js to explore new possibilities. I love turning ideas into
       real products and always look for ways to make things simpler and more engaging.
       <br>
       In every project, I'm eager to learn and share what I discover with my friends.
