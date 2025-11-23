@@ -4,6 +4,27 @@ import type { ProjectType } from '~/types';
 const projects: ProjectType[] = [
     {
         media: {
+            url: "/projects/studenthub.avif",
+            alt: "Studenthub – Modern Student Community Web Application by Taymaz Akbari"
+        },
+        link: "https://t.me/student_hub_bot/app?mode=fullscreen",
+        title: "Student Hub | دانشجویار",
+        date: "November 2025",
+        stacks: [
+            "Refactored",
+            "React",
+            "Next.js",
+            "Tailwind",
+            "Motion",
+        ],
+        seo: {
+            ariaLabel: "Studenthub – Modern Student Community Web Application by Taymaz Akbari",
+            title: "Studenthub – Modern Student Community Web Application by Taymaz Akbari"
+        }
+    },
+
+    {
+        media: {
             url: "/projects/cafify.avif",
             alt: "Cafify – Digital Menu Solution for Cafes and Restaurants by Taymaz Akbari"
         },
