@@ -2,13 +2,13 @@ import type { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    "name": "Taymakz.ir",
-    "short_name": "Taymakz",
+    name: "Taymakz.ir",
+    short_name: "Taymakz",
     description: 'Portfolio of Taymaz Akbari, Software Engineer and Creator of Studenthub and Cafify.',
     start_url: '/',
     display: 'standalone',
-    background_color: '#ffffff',
-    theme_color: '#0f0f0d',
+    theme_color: "#0f0f0d",
+    background_color: "#0f0f0d",
     icons: [
       {
         src: '/web-app-manifest-192x192.png',
