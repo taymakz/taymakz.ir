@@ -120,6 +120,27 @@ function Projects() {
   const projects: ProjectType[] = [
     {
       media: {
+        url: "/projects/tehgo.avif",
+        alt: "TehGo – Tehran Metro Guide by Taymaz Akbari"
+      },
+      link: "https://tehgo.ir",
+      title: "TehGo",
+      date: "December 2025",
+      github: { url: "https://github.com/taymakz/tehgo", text: "taymakz/tehgo" },
+      stacks: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind",
+        "PWA"
+      ],
+      seo: {
+        ariaLabel: "TehGo – Tehran Metro Guide by Taymaz Akbari",
+        title: "TehGo – Tehran Metro Guide by Taymaz Akbari"
+      }
+    },
+    {
+      media: {
         url: "/projects/student-hub.avif",
         alt: "Studenthub – A collection of practical tools and features designed to make your study experience at Iran Azad Universities simpler, more efficient, and more enjoyable by Taymaz Akbari"
       },
