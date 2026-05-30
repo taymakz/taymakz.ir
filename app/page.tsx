@@ -213,7 +213,7 @@ const projects: ProjectType[] = [
       url: "/projects/student-hub.avif",
       alt: "Studenthub Telegram Mini App by Taymaz Akbari",
     },
-    link: "https://t.me/student_hub_bot/app?mode=fullscreen",
+    link: "https://www.student-hub.ir/",
     title: "Studenthub Telegram Mini App",
     date: "November 2025",
     description:
@@ -242,22 +242,6 @@ const projects: ProjectType[] = [
     },
   },
   {
-    media: {
-      url: "/projects/student-hub.avif",
-      alt: "Studenthub – Modern Student Community Web Application by Taymaz Akbari",
-    },
-    link: "https://student-hub.ir",
-    title: "Student Hub",
-    date: "March 2025",
-    description:
-      "Modern student community web application for Iran Azad Universities with practical daily academic tools.",
-    stacks: ["Vue", "Nuxt", "Django", "Go", "PostgreSQL"],
-    seo: {
-      ariaLabel: "Studenthub – Modern Student Community Web Application by Taymaz Akbari",
-      title: "Studenthub – Modern Student Community Web Application by Taymaz Akbari",
-    },
-  },
-  {
     media: { url: "/projects/unitter.avif" },
     link: "https://unitter.taymakz.ir",
     title: "Malard Computer Student Hub",
@@ -270,14 +254,6 @@ const projects: ProjectType[] = [
     title: "Blesser Ecommerce Template",
     date: "May 2024",
     stacks: ["Tailwind", "UnoCss", "Dark/Light Mode"],
-  },
-  {
-    media: { url: "/projects/font-changer.avif" },
-    link: "https://fc.taymakz.ir/",
-    title: "Simple Font Changer",
-    date: "April 2024",
-    github: { url: "https://github.com/taymakz/font-changer", text: "taymakz/font-changer" },
-    stacks: ["Vue", "Nuxt", "Tailwind"],
   },
   {
     media: { url: "/projects/tipoosh.avif" },
