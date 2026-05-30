@@ -1,10 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Card } from "@/components/ui/card";
 
 export default function Page() {
   return (
-    <main className="container  py-10">
+    <main className="container py-10">
       <div className="max-w-3xl">
         <Hero />
       </div>
@@ -20,7 +19,9 @@ export default function Page() {
 function SectionHeader({ title }: { title: string }) {
   return (
     <div className="flex items-center gap-4 mb-8">
-      <h2 className="font-semibold text-lg whitespace-nowrap">{title}</h2>
+      <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground whitespace-nowrap">
+        {title}
+      </h2>
       <div className="flex-1 h-px bg-border" />
     </div>
   );
@@ -28,76 +29,85 @@ function SectionHeader({ title }: { title: string }) {
 
 function Hero() {
   return (
-    <div className="space-y-6">
-      <div className="space-y-1">
-        <h1 className="font-semibold text-4xl">Taymaz Akbari</h1>
-        <p className="text-muted-foreground text-lg">Software Engineer</p>
+    <div className="space-y-8">
+      {/* Availability */}
+      <div className="inline-flex items-center gap-2 text-xs text-muted-foreground">
+        <span className="relative flex size-2">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+          <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
+        </span>
+        Available for work
       </div>
 
+      {/* Name + title */}
+      <div className="space-y-2">
+        <h1 className="font-semibold text-4xl tracking-tight">Taymaz Akbari</h1>
+        <p className="text-muted-foreground text-lg">Full-Stack Software Engineer</p>
+      </div>
+
+      {/* Bio */}
       <p className="text-muted-foreground leading-7">
-        Full-stack Software Engineer with 5+ years of experience building and shipping production
-        web applications and SaaS products. Currently most productive with TypeScript,{" "}
+        5+ years building and shipping production web applications and SaaS products. Most
+        productive with <span className="text-foreground">TypeScript</span>,{" "}
         <span className="text-foreground">Hono</span> /{" "}
         <span className="text-foreground">Elysia</span> on the backend and{" "}
         <span className="text-foreground">React</span> /{" "}
-        <span className="text-foreground">Next.js</span> on the frontend. Also teaching
-        programming on{" "}
-        <a
-          href="https://www.youtube.com/@Taymakz"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-foreground hover:underline"
-        >
-          YouTube (@Taymakz)
-        </a>
-        . Available for remote positions worldwide, or on-site in Tehran / Karaj.
+        <span className="text-foreground">Next.js</span> on the frontend. Available for remote
+        positions worldwide, or on-site in Tehran / Karaj.
       </p>
 
-      <div className="flex items-center gap-2 flex-wrap">
-        <span className="text-sm text-muted-foreground">Creator of</span>
-              <Link
-          href="//student-hub.ir"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-card hover:bg-secondary/50 duration-200 shadow-xs border dark:border-transparent py-1 px-2.5 rounded-md flex items-center gap-1.5 text-sm"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 446.12 508.32"
-            className="w-4 text-foreground"
+      {/* Creator of */}
+      <div className="space-y-3">
+        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground/60">
+          Creator of
+        </p>
+        <div className="flex items-center gap-2 flex-wrap">
+          <Link
+            href="https://student-hub.ir"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-md border border-border bg-card px-2.5 py-1 text-sm shadow-xs hover:bg-secondary/50 duration-200 dark:border-transparent"
           >
-            <path
-              fill="currentColor"
-              d="M439.3,1.2l-213.46,128.62c-1.43.86-3.22.86-4.64,0L6.82.65C3.82-1.15,0,1.01,0,4.51v264.58c0,1.58.83,3.04,2.18,3.85l219.02,131.97c1.43.86,3.22.86,4.64,0l218.1-131.42c1.35-.81,2.18-2.28,2.18-3.85V5.06c0-3.5-3.82-5.66-6.82-3.85Z"
-            />
-            <path
-              fill="currentColor"
-              d="M446.12,315.63v56.77c0,1.58-.83,3.04-2.18,3.85l-218.1,131.42c-1.43.86-3.22.86-4.64,0L2.18,375.7c-1.35-.81-2.18-2.28-2.18-3.85v-56.77c0-3.5,3.82-5.66,6.82-3.85l187.25,112.83h.01l27.12,16.34c1.43.86,3.22.86,4.65,0l213.45-128.62c3-1.81,6.82.35,6.82,3.85Z"
-            />
-          </svg>
-          Studenthub
-        </Link>
-        <Link
-          href="//cafify.ir"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-card hover:bg-secondary/50 duration-200 shadow-xs border dark:border-transparent py-1 px-2.5 rounded-md text-sm"
-        >
-          Cafify
-        </Link>
-  
-        <span className="text-sm text-muted-foreground">· Teaching on</span>
-        <a
-          href="https://www.youtube.com/@Taymakz"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-card hover:bg-secondary/50 duration-200 shadow-xs border dark:border-transparent py-1 px-2.5 rounded-md flex items-center gap-1.5 text-sm"
-        >
-          <span className="icon-[lucide--youtube] size-4" />
-          YouTube
-        </a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 446.12 508.32"
+              className="w-4 text-foreground"
+            >
+              <path
+                fill="currentColor"
+                d="M439.3,1.2l-213.46,128.62c-1.43.86-3.22.86-4.64,0L6.82.65C3.82-1.15,0,1.01,0,4.51v264.58c0,1.58.83,3.04,2.18,3.85l219.02,131.97c1.43.86,3.22.86,4.64,0l218.1-131.42c1.35-.81,2.18-2.28,2.18-3.85V5.06c0-3.5-3.82-5.66-6.82-3.85Z"
+              />
+              <path
+                fill="currentColor"
+                d="M446.12,315.63v56.77c0,1.58-.83,3.04-2.18,3.85l-218.1,131.42c-1.43.86-3.22.86-4.64,0L2.18,375.7c-1.35-.81-2.18-2.28-2.18-3.85v-56.77c0-3.5,3.82-5.66,6.82-3.85l187.25,112.83h.01l27.12,16.34c1.43.86,3.22.86,4.65,0l213.45-128.62c3-1.81,6.82.35,6.82,3.85Z"
+              />
+            </svg>
+            Studenthub
+          </Link>
+        </div>
       </div>
 
+      {/* Teaching on */}
+      <div className="space-y-3">
+        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground/60">
+          Teaching on
+        </p>
+        <div className="flex items-center gap-2 flex-wrap">
+          <a
+            href="https://www.youtube.com/@Taymakz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-md border border-border bg-card px-2.5 py-1 text-sm shadow-xs hover:bg-secondary/50 duration-200 dark:border-transparent"
+          >
+            <span className="icon-[lucide--youtube] size-4" />
+            YouTube (@Taymakz)
+          </a>
+        </div>
+      </div>
+
+      <div className="h-px bg-border" />
+
+      {/* Contact */}
       <div className="flex items-center gap-x-5 gap-y-2 flex-wrap text-sm">
         <a
           href="mailto:taymazak1382@gmail.com"
