@@ -4,8 +4,10 @@ import { Card } from "@/components/ui/card";
 
 export default function Page() {
   return (
-    <main className="container max-w-3xl py-10">
-      <Hero />
+    <main className="container  py-10">
+      <div className="max-w-3xl">
+        <Hero />
+      </div>
       <div className="mt-20 space-y-20">
         <Teaching />
         <Projects />
@@ -125,7 +127,6 @@ function Hero() {
     </div>
   );
 }
-
 // ─── Projects ────────────────────────────────────────────────────────────────
 
 interface ProjectType {
@@ -263,7 +264,6 @@ const projects: ProjectType[] = [
     date: "September 2024",
     stacks: ["Nuxt", "Pinia", "Tailwind"],
   },
-
   {
     media: { url: "/projects/blesser.avif" },
     link: "https://blesser-intro.taymakz.ir",
@@ -295,81 +295,122 @@ const projects: ProjectType[] = [
   },
 ];
 
+// shared little helpers -------------------------------------------------------
+
+function StackList({ stacks }: { stacks: string[] }) {
+  return (
+    <ul className="mt-4 flex flex-wrap gap-1.5">
+      {stacks.map((stack) => (
+        <li
+          key={stack}
+          className="rounded border border-border px-2 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-muted-foreground"
+        >
+          {stack}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function OpenCue() {
+  return (
+    <div className="mt-5 inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground transition-colors group-hover:text-foreground">
+      Open
+      <span className="icon-[lucide--arrow-right] size-3" />
+    </div>
+  );
+}
+function CardMedia({
+  src,
+  alt,
+  width,
+  height,
+}: {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}) {
+  return (
+    <div className="relative w-full overflow-hidden rounded-lg border border-border bg-background shadow-[0_1px_2px_rgba(0,0,0,0.06),0_8px_24px_-12px_rgba(0,0,0,0.18)] transition-[transform,box-shadow,border-color] group-hover:border-foreground/40 group-hover:shadow-[0_2px_4px_rgba(0,0,0,0.08),0_16px_32px_-12px_rgba(0,0,0,0.28)] dark:bg-white/6 dark:shadow-[0_1px_2px_rgba(0,0,0,0.4),0_8px_24px_-12px_rgba(0,0,0,0.6)] dark:group-hover:shadow-[0_2px_4px_rgba(0,0,0,0.5),0_16px_32px_-12px_rgba(0,0,0,0.7)]">
+      <Image
+        src={src}
+        width={width}
+        height={height}
+        loading="lazy"
+        decoding="async"
+        className="block h-auto w-full object-cover dark:brightness-105"
+        alt={alt}
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 rounded-[inherit] ring-1 ring-foreground/8 ring-inset dark:ring-white/8"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-foreground/20 to-transparent dark:via-white/15"
+      />
+    </div>
+  );
+}
+
+
+// section + card --------------------------------------------------------------
+
 function Projects() {
   return (
     <section>
       <SectionHeader title="Projects" />
-      <div className="space-y-6 divide-y-2">
+      <ul className="space-y-12">
         {projects.map((item, index) => (
           <ProjectCard key={index} item={item} />
         ))}
-      </div>
+      </ul>
     </section>
   );
 }
 
 function ProjectCard({ item }: { item: ProjectType }) {
   return (
-    <Card className="flex gap-6 sm:items-start flex-col md:flex-row shadow-xs p-4  ">
+    <li>
       <a
         href={item.link}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={item.seo?.ariaLabel || item.title}
-        className="block shrink-0"
+        className="group grid grid-cols-1 items-start gap-6 focus-visible:outline-none lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-8"
       >
-        <Image
+        <CardMedia
           src={item.media.url}
+          alt={item.media.alt || item.title}
           width={840}
           height={420}
-          loading="lazy"
-          className="md:w-56 w-full rounded-xl border aspect-16/8 object-cover"
-          alt={item.media.alt || item.title}
+      
         />
-      </a>
-      <div className="flex-1 min-w-0">
-        <div className="space-y-2">
-          <a
-            href={item.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={item.seo?.ariaLabel || item.title}
-            className="inline-block font-medium hover:underline"
-          >
-            {item.title}
-          </a>
-          <div className="flex items-center gap-2 text-muted-foreground text-sm">
-            <span className="icon-[lucide--calendar-clock] size-4" />
+        <div className="px-1 lg:sticky lg:top-20 lg:self-start lg:px-0 lg:pt-2">
+          <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground/70">
+            Project
+          </div>
+          <div className="mt-2 flex items-center gap-2">
+            <h3 className="font-heading text-2xl tracking-tight text-foreground">{item.title}</h3>
+          </div>
+          <div className="mt-1 font-mono text-[11px] tracking-[0.05em] text-muted-foreground">
             {item.date}
           </div>
           {item.description && (
-            <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
           )}
           {item.github && (
-            <a
-              href={item.github.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={item.github.text}
-              className="flex items-center gap-2 text-muted-foreground hover:text-foreground duration-200 text-sm"
-            >
-              <span className="icon-[lucide--github] size-4" />
+            <span className="mt-3 flex items-center gap-2 font-mono text-[11px] text-muted-foreground transition-colors group-hover:text-foreground">
+              <span className="icon-[lucide--github] size-3.5" />
               {item.github.text}
-            </a>
+            </span>
           )}
+          <StackList stacks={item.stacks} />
+          <OpenCue />
         </div>
-        <ul className="flex flex-wrap gap-2 mt-4">
-          {item.stacks.map((stack) => (
-            <li
-              key={stack}
-              className="bg-primary text-primary-foreground rounded-md py-1 px-2 text-sm"
-            >
-              {stack}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </Card>
+      </a>
+    </li>
   );
 }
 
@@ -381,7 +422,7 @@ interface CourseType {
   title: string;
   year: string;
   description: string;
-  stacks: string[];
+
 }
 
 const courses: CourseType[] = [
@@ -395,7 +436,7 @@ const courses: CourseType[] = [
     year: "2026",
     description:
       "Comprehensive HTML course from fundamentals to advanced, produced with professional custom animations for clarity and engagement.",
-    stacks: ["HTML", "CSS Animations"],
+    
   },
   {
     media: {
@@ -407,7 +448,7 @@ const courses: CourseType[] = [
     year: "2026",
     description:
       "Comprehensive CSS course from fundamentals to advanced, produced with full animated slides for maximum visual clarity.",
-    stacks: ["CSS", "CSS Animations"],
+   
   },
 ];
 
@@ -415,71 +456,51 @@ function Teaching() {
   return (
     <section>
       <SectionHeader title="Teaching" />
-      <div className="space-y-6">
+      <ul className="space-y-12">
         {courses.map((course, index) => (
           <CourseCard key={index} course={course} />
         ))}
-      </div>
+      </ul>
     </section>
   );
 }
 
 function CourseCard({ course }: { course: CourseType }) {
   return (
-    <Card className="flex gap-6 sm:items-start flex-col md:flex-row p-4 shadow-xs">
+    <li>
       <a
         href={course.link}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={course.title}
-        className="block shrink-0"
+        className="group grid grid-cols-1 items-start gap-6 focus-visible:outline-none lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-8"
       >
-        <Image
+        <CardMedia
           src={course.media.url}
+          alt={course.media.alt || course.title}
           width={1280}
           height={720}
-          loading="lazy"
-          className="md:w-56 w-full rounded-xl border aspect-video object-cover"
-          alt={course.media.alt || course.title}
+        
         />
-      </a>
-      <div className="flex-1 min-w-0">
-        <div className="space-y-2">
-          <a
-            href={course.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block font-medium hover:underline"
-          >
-            {course.title}
-          </a>
-          <div className="flex items-center gap-2 text-muted-foreground text-sm">
-            <span className="icon-[lucide--calendar-clock] size-4" />
+        <div className="px-1 lg:sticky lg:top-20 lg:self-start lg:px-0 lg:pt-2">
+          <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground/70">
+            Teaching
+          </div>
+          <div className="mt-2 flex items-center gap-2">
+            <h3 className="font-heading text-2xl tracking-tight text-foreground">{course.title}</h3>
+          </div>
+          <div className="mt-1 font-mono text-[11px] tracking-[0.05em] text-muted-foreground">
             {course.year}
           </div>
-          <p className="text-muted-foreground text-sm leading-relaxed">{course.description}</p>
-          <a
-            href="https://www.youtube.com/@Taymakz"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-muted-foreground hover:text-foreground duration-200 text-sm"
-          >
-            <span className="icon-[lucide--youtube] size-4" />
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{course.description}</p>
+          <span className="mt-3 flex items-center gap-2 font-mono text-[11px] text-muted-foreground transition-colors group-hover:text-foreground">
+            <span className="icon-[lucide--youtube] size-3.5" />
             youtube.com/@Taymakz
-          </a>
+          </span>
+          <OpenCue />
         </div>
-        <ul className="flex flex-wrap gap-2 mt-4">
-          {course.stacks.map((stack) => (
-            <li
-              key={stack}
-              className="bg-primary text-primary-foreground rounded-md py-1 px-2 text-sm"
-            >
-              {stack}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </Card>
+      </a>
+    </li>
   );
 }
 
