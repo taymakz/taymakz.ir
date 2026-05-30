@@ -6,16 +6,27 @@ import AppHeader from "@/components/app-header";
 
 const appTitle = "Taymaz Akbari";
 const appDescription =
-  "Portfolio of Taymaz Akbari, a passionate Software Engineer who loves building engaging web applications. Creator of Studenthub and Cafify.";
+  "Portfolio of Taymaz Akbari, a Full-stack Software Engineer with 5+ years of experience. Creator of Cafify and Studenthub. Teaching HTML & CSS on YouTube.";
 const appAuthor = "Taymaz Akbari";
 const appUrl = "https://taymakz.ir";
 const appKeywords = [
   "Taymaz Akbari",
   "Software Engineer",
+  "Full-stack Developer",
+  "Next.js",
+  "React",
+  "TypeScript",
   "Studenthub",
   "دانشجویار",
   "Cafify",
   "کافیفای",
+  "TehGo",
+  "Barricade",
+  "Uploader",
+  "Turbo Auth Starter",
+  "HTML Course",
+  "CSS Course",
+  "YouTube",
   "Blesser",
   "قالب بلسر",
   "Rotikala",
