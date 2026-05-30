@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Student Hub - Educational app for students";
+export const alt = "Taymaz Akbari – Full-Stack Software Engineer";
 export const size = {
   width: 1200,
   height: 630,
