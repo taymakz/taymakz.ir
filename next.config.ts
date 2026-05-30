@@ -3,8 +3,13 @@ import { version } from "./package.json";
 
 const backendUrl = process.env.BASE_API || "http://localhost:8000";
 const nextConfig: NextConfig = {
-  /* config options here */
   trailingSlash: true,
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "placehold.co" },
+      { protocol: "https", hostname: "img.youtube.com" },
+    ],
+  },
   async rewrites() {
     return [
       {
