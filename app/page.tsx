@@ -84,6 +84,7 @@ function Hero() {
             </svg>
             Studenthub
           </Link>
+
         </div>
       </div>
 
@@ -133,6 +134,14 @@ function Hero() {
         >
           <span className="icon-[lucide--youtube] size-4" />
           @Taymakz
+        </a>
+        <a
+          href="/resume.pdf"
+          download
+          className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground duration-200"
+        >
+          <span className="icon-[lucide--file-text] size-4" />
+          Resume
         </a>
       </div>
     </div>
