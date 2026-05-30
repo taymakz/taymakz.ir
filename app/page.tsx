@@ -11,6 +11,7 @@ export default function Page() {
       <div className="mt-20 space-y-20">
         <Teaching />
         <Projects />
+        <Products />
       </div>
     </main>
   );
@@ -249,25 +250,11 @@ const projects: ProjectType[] = [
     stacks: ["Nuxt", "Pinia", "Tailwind"],
   },
   {
-    media: { url: "/projects/blesser.avif" },
-    link: "https://blesser-intro.taymakz.ir",
-    title: "Blesser Ecommerce Template",
-    date: "May 2024",
-    stacks: ["Tailwind", "UnoCss", "Dark/Light Mode"],
-  },
-  {
     media: { url: "/projects/tipoosh.avif" },
     link: "https://shop.taymakz.ir/",
     title: "Tipoosh Full Ecommerce",
     date: "March 2024",
     stacks: ["Vue", "Nuxt", "Django", "PostgreSQL"],
-  },
-  {
-    media: { url: "/projects/rotikala.avif" },
-    link: "https://rtlr.ir/266095",
-    title: "Rotikala Ecommerce Template",
-    date: "September 2023",
-    stacks: ["Tailwind", "Dark/Light Mode"],
   },
 ];
 
@@ -381,6 +368,86 @@ function ProjectCard({ item }: { item: ProjectType }) {
               <span className="icon-[lucide--github] size-3.5" />
               {item.github.text}
             </span>
+          )}
+          <StackList stacks={item.stacks} />
+          <OpenCue />
+        </div>
+      </a>
+    </li>
+  );
+}
+
+// ─── Products ────────────────────────────────────────────────────────────────
+
+interface ProductType {
+  media: { url: string; alt?: string };
+  link: string;
+  title: string;
+  date: string;
+  description?: string;
+  stacks: string[];
+}
+
+const products: ProductType[] = [
+  {
+    media: { url: "/projects/blesser.avif", alt: "Blesser Ecommerce Template by Taymaz Akbari" },
+    link: "https://blesser-intro.taymakz.ir",
+    title: "Blesser Ecommerce Template",
+    date: "May 2024",
+    description: "Clean, responsive ecommerce UI template with dark/light mode support.",
+    stacks: ["Tailwind", "UnoCss", "Dark/Light Mode"],
+  },
+  {
+    media: { url: "/projects/rotikala.avif", alt: "Rotikala Ecommerce Template by Taymaz Akbari" },
+    link: "https://rtlr.ir/266095",
+    title: "Rotikala Ecommerce Template",
+    date: "September 2023",
+    description: "RTL-ready ecommerce template with dark/light mode support.",
+    stacks: ["Tailwind", "Dark/Light Mode"],
+  },
+];
+
+function Products() {
+  return (
+    <section>
+      <SectionHeader title="Products" />
+      <ul className="space-y-12">
+        {products.map((item, index) => (
+          <ProductCard key={index} item={item} />
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+function ProductCard({ item }: { item: ProductType }) {
+  return (
+    <li>
+      <a
+        href={item.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={item.title}
+        className="group grid grid-cols-1 items-start gap-6 focus-visible:outline-none lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-8"
+      >
+        <CardMedia
+          src={item.media.url}
+          alt={item.media.alt || item.title}
+          width={840}
+          height={420}
+        />
+        <div className="px-1 lg:sticky lg:top-20 lg:self-start lg:px-0 lg:pt-2">
+          <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground/70">
+            For Sale
+          </div>
+          <div className="mt-2 flex items-center gap-2">
+            <h3 className="font-heading text-2xl tracking-tight text-foreground">{item.title}</h3>
+          </div>
+          <div className="mt-1 font-mono text-[11px] tracking-[0.05em] text-muted-foreground">
+            {item.date}
+          </div>
+          {item.description && (
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
           )}
           <StackList stacks={item.stacks} />
           <OpenCue />
