@@ -162,6 +162,26 @@ interface ProjectType {
 
 const projects: ProjectType[] = [
   {
+  media: {
+    url: "/projects/compify.avif",
+    alt: "Compify – Open Source Video Compressor by Taymaz Akbari",
+  },
+  link: "https://compify-tau.vercel.app",
+  title: "Compify",
+  date: "June 2026",
+  description:
+    "Open-source desktop video compressor for Windows, macOS, and Linux featuring smart presets, hardware acceleration, batch processing, and privacy-first local video compression powered by FFmpeg.",
+  github: {
+    url: "https://github.com/taymakz/compify",
+    text: "taymakz/compify",
+  },
+  stacks: ["Tauri v2", "React 19", "Rust", "FFmpeg"],
+  seo: {
+    ariaLabel: "Compify – Open Source Video Compressor by Taymaz Akbari",
+    title: "Compify – Open Source Video Compressor by Taymaz Akbari",
+  },
+},
+  {
     media: {
       url: "/projects/t-auth-starter.avif",
       alt: "Turbo Auth Starter by Taymaz Akbari",
